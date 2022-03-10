@@ -59,15 +59,24 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
+      
+      _text = "Prima ";
+      int x, y, z;
+
       if (_counter > 10) {
         _counter = 1;
       }
-
-      _text = "Prima ";
-      for(int i=2; i<=_counter; i++){
-        if(i%2 != 0 || i == 2){
-          _text += "${i},";
+      
+      for (x = 2; x <= _counter; x++) {
+        y = 0; 
+        for (z = 2; z < x; z++) { 
+          if (x % z == 0) { 
+            y = 1; 
+          } 
         }
+        if (y == 0) { 
+          _text += "${x}, "; 
+        } 
       }
     });
   }
