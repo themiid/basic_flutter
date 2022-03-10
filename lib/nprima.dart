@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
           } 
         }
         if (y == 0) { 
-          _text += "${x}, "; 
+          _text += "${x}, ";
         } 
       }
     });
