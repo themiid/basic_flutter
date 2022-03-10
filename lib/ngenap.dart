@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Genap Kelipatan 3'),
     );
   }
 }
@@ -59,15 +59,18 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
-      if (_counter > 10) {
+      if (_counter > 50) {
         _counter = 0;
       }
 
       _text = "Genap : ";
-      for (int i = 0; i <= _counter; i++) {
-        if (i % 2 == 0) {
+      for (int i = 1; i <= _counter; i++) {
+        if (i % 3 == 0){
+          if (i % 2 == 0) {
           _text += "${i},";
         }
+        }
+        
       }
     });
   }
